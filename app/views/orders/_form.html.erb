@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= select("user", "first_name", User.all.collect {|p| [ p.first_name, p.id ] }, { include_blank: true }) %>
+    <%= collection_select(:order, :user_id, @users, :id, :first_name) %>
   </div>
 
   <div class="actions">
